@@ -14,27 +14,38 @@ app.use('/', router);
 
 
 
-io.on('connection', (socket) => { // when a user connects console.log
-  console.log('user  ' + socket.id + ' connected');
+io.on('connection', (socket) => { 
+  getproject(socket.id)
+  console.log('user  ' + socket.id + ' connected');// when a user connects console.log
 
   
-  socket.on('createproject', (title, id, time, url) => {
+  socket.on('createproject', (title, id, type, url) => {
  
-    createproject(title, id, time, url);
+    createproject(title, id, type, url);
 
   })
 
   socket.on("search", () => {
+    console.log("socket wroking")
     getproject(socket.id)
   })
 
+  socket.on("getproject" , (docid) => {
+ 
+    getspecificproject(docid, socket.id);
+  })
+
+  socket.on("createpost", (project, title, desc, time, author) => {
+
+    createpost(project, title, desc, time, author);
+  })
 
 });
 
 
 //firebase stuff
 var admin = require("firebase-admin");
-const FieldValue = admin.firestore.FieldValue;
+const { FieldValue } = require('firebase-admin/firestore');
 var serviceAccount = require("./key.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -44,16 +55,17 @@ admin.initializeApp({
 const db = admin.firestore();
 
 
-async function createproject(ptitle, userid, gettime, url) {
-  const projects = db.collection('projects');
+async function createproject(ptitle, userid, gettime, type) {
+  const projects = db.collection('projects').doc();
   
- await projects.add( {
+ await projects.set( {
 
     project_title: ptitle,
     user: userid,
     time: gettime,
-    image_url: url,
-    posts: []
+    type: type,
+    posts: [],
+    id: projects.id
   })
   
 }
@@ -64,26 +76,37 @@ async function getproject(socketid) {
   const oso = await proj.get();
 
   oso.forEach(doc => {
+
     arrproj.push(doc.data())
+    
   });
 
   io.to(socketid).emit("search", arrproj)
 }
 
 
+async function getspecificproject(projectid, socketid) {
+  const project = db.collection('projects').doc(projectid);
+  const doc = await project.get();
+  io.to(socketid).emit("getproject",doc.data());
+}
+
 async function createpost(project, posttitle, postdesc, posttime, author) {
-  const specific_project = db.collection('projects').doc(project);
+
+ const specific_project = db.collection('projects').doc(project);
+
   var postdata = {
+    id: project,
     title: posttitle,
     desc: postdesc,
     author: author,
-    time: postttime
+    time: posttime
   }
 
-  postdata = JSON.stringify(postdata);
-  await specific_project.update({
+
+    await specific_project.update({
     posts: FieldValue.arrayUnion(postdata)
-  })
+  });
 
 }
 

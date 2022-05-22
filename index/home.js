@@ -26,19 +26,20 @@ boxes.forEach(box => {
   for (var i = 0; i<array.length;i++) {
 
     const clone = template.cloneNode(true); // clone html template
- 
+  
  
   let postdata = JSON.stringify(array[i]);
     postdata = JSON.parse(postdata); 
-    
+    clone.id = postdata["id"]
+ 
     var title = clone.querySelector(".project_title");
     title.textContent = postdata["project_title"]
 
     var time = clone.querySelector(".project_time");
-    time.textContent = postdata["time"];
+    time.textContent = postdata["type"] + " created on 5/21/22";
 
     var user = clone.querySelector(".project_author");
-    user.textContent = postdata["user"];
+    user.innerHTML = "By " + postdata["user"]
 
       
     list.appendChild(clone);
@@ -46,13 +47,16 @@ boxes.forEach(box => {
 
 
   }
-const currentboxes = Array.from(document.getElementsByClassName('home-content list-item'));
+const currentboxes = Array.from(document.getElementsByClassName('home-template list'));
 
   currentboxes.forEach(cbox => {
     cbox.onclick = function() {
-     
+       sessionStorage.setItem("oso", cbox.id); 
+      console.log(sessionStorage.getItem("oso"))
+ location.href = "/Posts/posts.html"
+      
     }
   })
-
+  
   
 })

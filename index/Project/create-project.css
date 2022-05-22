@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
   background-size: cover;
-
+  background-image: url("../public/playground_assets/gradient.png");
 }
 .create-project-header {
   width: 100%;
@@ -61,7 +61,7 @@
   position: absolute;
   text-align: center;
   background-size: cover;
-  background-image: url("public/playground_assets/vector%201%20%5B1%5D-200h.png");
+  background-image: url("../public/playground_assets/arrow.png");
   background-position: center;
 }
 .create-project-container1 {
@@ -146,6 +146,7 @@
   margin-bottom: 50px;
 }
 .create-project-register1 {
+  margin-top: 25px;
   color: #3b3b3b;
   width: 248px;
   height: 40px;
@@ -173,6 +174,7 @@
   font-weight: 900;
 }
 .create-project-btn-group1 {
+ 
   border: 2px dashed rgba(120, 120, 120, 0.4);
   display: flex;
   align-self: center;

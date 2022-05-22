@@ -3,11 +3,14 @@
 <html lang="en">
   <head>
     <title>CreatePost - Realistic Attached Jaguar</title>
- 
+    <meta
+      property="og:title"
+      content="CreatePost - Realistic Attached Jaguar"
+    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-
+    <meta property="twitter:card" content="summary_large_image" />
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
     </style>
@@ -35,39 +38,58 @@
       data-tag="font"
     />
     <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tiny.cloud/1/0jhhldlrqzs6uog75fizy9xqar8iookn4ccoev8es0n6ps4f/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
   <body>
     <div>
       <link href="./create-post.css" rel="stylesheet" />
 
       <div class="create-post-container">
-        <header data-role="Header" class="create-post-header">
+       <header data-role="Header" class="create-project-header">
           <img
             alt="logo"
             src="../public/playground_assets/logo.png"
-            class="create-post-image"
+            class="create-project-image"
           />
-          <div class="create-post-btn-group">
-  
+          <div class="create-project-btn-group">
+            <button class="create-project-register button" id = "return">
+              <span class="create-project-text"></span>
+            </button>
           </div>
         </header>
         <div class="create-post-container1">
           <span class="create-post-text1">Post</span>
         </div>
+        
         <div class="create-post-container2">
           <input
             type="text"
             placeholder="Title of Post"
             class="create-post-title input"
+            id = "title"
           />
           <input
             type="text"
             placeholder="Author"
             class="create-post-author input"
+            id = "auth"
           />
-          <div class="create-post-description"></div>
+
+
+<textarea id="default-editor">
+  <p><em>Hello</em>, <span style="text-decoration: underline;"><strong>World!</strong></span></p>
+</textarea>
+          
+      
+        </div>
+         
+
+
+
+            
+        
           <div class="create-post-btn-group1">
-            <button class="create-post-register1 button">
+            <button class="create-post-register1 button" id = "sub">
               <span class="create-post-text2">
                 <span>Submit</span>
                 <span></span>
@@ -79,5 +101,8 @@
         </div>
       </div>
     </div>
+      <script src="/socket.io/socket.io.js"></script>
+    <script src = "createpost.js"></script>
   </body>
+
 </html>

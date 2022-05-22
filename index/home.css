@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
   background-size: cover;
-
+  background-image: url("public/playground_assets/gradient.png");
 }
 .home-header {
   width: 100%;
@@ -177,6 +177,7 @@
 .home-content {
   height: 350px;
   position: relative;
+  text-align: center;
   border-color: var(--dl-color-gray-black);
   border-width: 0px;
   margin-bottom: var(--dl-space-space-fourunits);
@@ -201,13 +202,16 @@
   margin: auto;
   display: flex;
   position: absolute;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .home-text04 {
   color: #6ec1d8;
+  font-size: 40px;
   font-style: normal;
+  margin-top: 64px;
+  text-align: center;
   font-weight: 900;
+  margin-left: 40px;
 }
 .home-text06 {
   text-align: center;
@@ -223,30 +227,15 @@
   display: flex;
   position: absolute;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .home-text07 {
+  align-self: flex-start;
   font-style: normal;
+  margin-top: 129px;
+  text-align: center;
   font-weight: 900;
-}
-.home-project-image {
-  top: 100px;
-  flex: 0 0 auto;
-  left: 0px;
-  width: 100%;
-  height: 166px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.home-image1 {
-  height: 191px;
-  padding: 0px;
-  align-self: center;
-  object-fit: cover;
-  padding-left: 450px;
-  padding-right: 450px;
+  margin-left: 40px;
 }
 .home-project-time {
   flex: 0 0 auto;
@@ -257,13 +246,14 @@
   display: flex;
   position: absolute;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
-.home-text10 {
+.home-text08 {
   align-self: flex-start;
   padding-top: 0px;
+  padding-left: 40px;
 }
-.home-text11 {
+.home-text09 {
   font-style: normal;
   font-weight: 900;
 }
@@ -280,7 +270,5 @@
   .home-header {
     padding: var(--dl-space-space-unit);
   }
-  .home-image1 {
-    height: auto;
-  }
 }
+

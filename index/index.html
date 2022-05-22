@@ -3,13 +3,24 @@
 <html lang="en">
   <head>
     <title>Realistic Attached Jaguar</title>
-  
+    <meta property="og:title" content="Realistic Attached Jaguar" />
+    <meta property="twitter:card" content="summary_large_image" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="CreateProject - Realistic Attached Jaguar"
+    />
+    <meta property="og:title" content="AboutUs - Realistic Attached Jaguar" />
+    <meta property="og:title" content="Posts - Realistic Attached Jaguar" />
+    <meta
+      property="og:title"
+      content="CreatePost - Realistic Attached Jaguar"
+    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-
+    <meta property="twitter:card" content="summary_large_image" />
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
     </style>
@@ -36,17 +47,18 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       data-tag="font"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div>
       <link href="./home.css" rel="stylesheet" />
 
       <div class="home-container">
+        
         <header data-role="Header" class="home-header">
           <img
             alt="logo"
-            src="/public/playground_assets/logo.png"
+            src="public/playground_assets/logo.png"
             class="home-image"
           />
           <div class="home-btn-group">
@@ -54,6 +66,7 @@
               <span class="home-text">Create</span>
             </button>
           </div>
+          
         </header>
         <div class="home-container1">
           <span class="home-text01">Find a Project</span>
@@ -63,8 +76,9 @@
             <span class="home-text02"><span>Search</span></span>
           </button>
         </div>
+				
         <div class="home-container2" id = "tempdiv">
-          <div class="home-template list" id = "temp">
+          <div class="home-template list" id = "temp" style = "display: none">
             <li class="home-content list-item">
               <div class="home-border"></div>
               <div class="home-project-title">
@@ -72,7 +86,6 @@
                   <span class = "project_title">
                     This is the title of this project that is about the ocean
                   </span>
-                  <span class="home-text06">&amp;#8203;</span>
                 </span>
               </div>
               <div class="home-project-author">
@@ -80,11 +93,11 @@
                   <span class = "project_author">Proposed by: Marc Malubay</span>
                 </span>
               </div>
-              <div class="home-project-time">
-                <span class="home-text10 post_time">
-                  <span class="project_time">11:38 AM, 05-21-2022</span>
-                </span>
-              </div>
+        <div class="home-project-time">
+            <span class="home-text08 post_time">
+              <span class="home-text09 project_time">11:38 AM, 05-21-2022</span>
+            </span>
+          </div>
             </li>
           </div>
         </div>
