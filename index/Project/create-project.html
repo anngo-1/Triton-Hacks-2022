@@ -3,20 +3,10 @@
 <html lang="en">
   <head>
     <title>CreateProject - Realistic Attached Jaguar</title>
-    <meta
-      property="og:title"
-      content="CreateProject - Realistic Attached Jaguar"
-    />
-    <meta property="og:title" content="AboutUs - Realistic Attached Jaguar" />
-    <meta property="og:title" content="Posts - Realistic Attached Jaguar" />
-    <meta
-      property="og:title"
-      content="CreatePost - Realistic Attached Jaguar"
-    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
     </style>
@@ -43,7 +33,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       data-tag="font"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <div>
@@ -53,13 +43,10 @@
         <header data-role="Header" class="create-project-header">
           <img
             alt="logo"
-            src="../public/playground_assets/group%203%20%5B1%5D-200h.png"
+            src="../public/playground_assets/logo.png"
             class="create-project-image"
           />
           <div class="create-project-btn-group">
-            <button class="create-project-register button" id = "return">
-              <span class="create-project-text"></span>
-            </button>
           </div>
         </header>
         <div class="create-project-container1">
@@ -85,13 +72,9 @@
             placeholder="Cover Image URL"
             class="create-project-image-id input"
 						id = "imageurl"
+						style = "display: none"
           />
-          <img
-            alt="image"
-            src="../public/playground_assets/https://play.teleporthq.io/static/svg/default-img.svg"
-            class="create-project-image1"
-						id = "realimage"
-          />
+
           <button class="create-project-register1 button" id = "sub">
             <span class="create-project-text3">
               <span>Submit</span>

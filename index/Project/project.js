@@ -1,5 +1,4 @@
 var socket = io();
-const ret = document.getElementById("return");
 const submit = document.getElementById("sub");
 var title = document.getElementById("title");
 var author = document.getElementById("author");
@@ -50,10 +49,4 @@ submit.onclick = function() {
   
 }
 
-
-
-
-ret.onclick = function() {
-  location.href = "../index.html"
-}
 
