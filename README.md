@@ -29,4 +29,4 @@ There are still multiple features that SeaShell could use, especially more featu
 
 
 
-Try it out [here!](Triton-Hacks-2022.anngo2.repl.co )
+Try it out [here!]( Triton-Hacks-2022.anngo2.repl.co )
